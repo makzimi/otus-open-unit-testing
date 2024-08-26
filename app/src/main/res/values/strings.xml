@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UnitTestsLesson</string>
+    <string name="characters">Characters</string>
+    <string name="error_wile_loading_data">Error wile loading data</string>
+</resources>
