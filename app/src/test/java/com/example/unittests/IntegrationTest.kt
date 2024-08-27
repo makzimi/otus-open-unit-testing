@@ -18,6 +18,7 @@ import com.example.unittests.characters.presentation.CharacterListViewModel
 import com.example.unittests.characters.presentation.CharacterState
 import com.example.unittests.characters.presentation.CharactersScreenState
 import com.example.unittests.characters.presentation.StateFactory
+import com.example.unittests.characters.presentation.StateFactoryImpl
 import com.example.unittests.common.network.dto.CharacterDto
 import com.example.unittests.finish.CharacterLocalDataSourceFake
 import com.example.unittests.finish.FavoritesDataSourceFake
@@ -82,7 +83,7 @@ class IntegrationTest {
 //        )
 //        sut = com.example.unittests.characters.presentation.finish.CharacterListViewModel(
 //            consumeCharactersUseCase = consumeCharactersUseCase,
-//            stateFactory = StateFactory(),
+//            stateFactory = StateFactoryImpl(),
 //            consumeFavoritesUseCase = consumeFavoritesUseCase,
 //            addFavoriteUseCase = addFavoriteUseCase,
 //            removeFavoriteUseCase = removeFavoriteUseCase,

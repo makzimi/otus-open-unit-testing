@@ -5,9 +5,16 @@ import com.example.unittests.characters.domain.FavoriteCharacter
 import dagger.hilt.android.scopes.ViewModelScoped
 import javax.inject.Inject
 
-@ViewModelScoped
-class StateFactory @Inject constructor() {
+interface StateFactory {
     fun create(
+        character: Character,
+        favorites: Set<FavoriteCharacter>,
+    ): CharacterState
+}
+
+@ViewModelScoped
+class StateFactoryImpl @Inject constructor(): StateFactory {
+    override fun create(
         character: Character,
         favorites: Set<FavoriteCharacter>,
     ): CharacterState {

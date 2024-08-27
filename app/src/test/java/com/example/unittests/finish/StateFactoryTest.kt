@@ -3,16 +3,17 @@ package com.example.unittests.finish
 import com.example.unittests.characters.domain.Character
 import com.example.unittests.characters.domain.FavoriteCharacter
 import com.example.unittests.characters.presentation.StateFactory
+import com.example.unittests.characters.presentation.StateFactoryImpl
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 
 class StateFactoryTest {
-    private lateinit var sut: StateFactory
+    private lateinit var sut: StateFactoryImpl
 
     @Before
     fun setup() {
-        sut = StateFactory()
+        sut = StateFactoryImpl()
     }
 
     @Test

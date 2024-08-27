@@ -79,6 +79,7 @@ class CharactersFragment : Fragment() {
     private fun showCharacterList(characterStateList: List<CharacterState>) {
         binding.progress.visibility = View.GONE
         binding.recyclerView.visibility = View.VISIBLE
+        binding.swipeRefreshLayout.isRefreshing = false
         (binding.recyclerView.adapter as CharactersAdapter).submitList(characterStateList)
     }
 

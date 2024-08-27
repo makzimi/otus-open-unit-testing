@@ -6,7 +6,7 @@ import com.example.unittests.characters.domain.ConsumeCharactersUseCase
 import com.example.unittests.characters.domain.ConsumeFavoritesUseCase
 import com.example.unittests.characters.domain.FavoriteCharacter
 import com.example.unittests.characters.domain.RemoveFavoriteUseCase
-import com.example.unittests.characters.presentation.finish.CharacterListViewModel
+import com.example.unittests.characters.presentation.CharacterListViewModel
 import com.example.unittests.characters.presentation.CharacterState
 import com.example.unittests.characters.presentation.StateFactory
 import kotlinx.coroutines.flow.flow
@@ -14,6 +14,8 @@ import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -67,8 +69,8 @@ class CharacterListViewModelTest {
 //        val state1 = CharacterState(id = "1")
 //        val state2 = CharacterState(id = "2")
 //
-//        whenever(stateFactory.create(argThat { id == "1" }, any())).thenReturn(state1)
-//        whenever(stateFactory.create(argThat { id == "2" }, any())).thenReturn(state2)
+//        stateFactory.map["1"] = state1
+//        stateFactory.map["2"] = state2
 //
 //        return listOf(state1, state2)
 //    }

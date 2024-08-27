@@ -19,6 +19,7 @@ import com.example.unittests.characters.presentation.finish.CharacterListViewMod
 import com.example.unittests.characters.presentation.CharacterState
 import com.example.unittests.characters.presentation.CharactersScreenState
 import com.example.unittests.characters.presentation.StateFactory
+import com.example.unittests.characters.presentation.StateFactoryImpl
 import com.example.unittests.common.network.dto.CharacterDto
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
@@ -108,7 +109,7 @@ class IntegrationTest {
         )
         sut = CharacterListViewModel(
             consumeCharactersUseCase = consumeCharactersUseCase,
-            stateFactory = StateFactory(),
+            stateFactory = StateFactoryImpl(),
             consumeFavoritesUseCase = consumeFavoritesUseCase,
             addFavoriteUseCase = addFavoriteUseCase,
             removeFavoriteUseCase = removeFavoriteUseCase,
